@@ -1,0 +1,118 @@
+LINUX CERTIFICATION:
+
+Exams Essentials: [weightage %]
+-Essential Commands           [25%]
+-Operation of Running Systems [20%]
+-User and Group Management    [10%]
+-Networking 		      [12%]
+-Service Configuration 	      [20%]
+-Storage Management    	      [13%]
+
+---> 2 Hours
+---> No MCQs
+---> 375 USD Valid for 3 Years
+
+1. Ways of logging into Linux System:
+-Console
+-Virtual Terminal
+-Terminal Emulator
+
+2. Uses of Consoles:
+-Multiple users can access it at the same time
+-ctrl+alt+f2 (Virtual Terminal)
+
+3. Types: 
+-Local GUI:
+	-List of Users are displayed
+	-Exit: Clicking Log out option
+-Local Text Console :
+	-No list of Users are displayed
+	-Exit: enter 'exit' on console to exit
+-Remote GUI:
+	-VNC or RDP
+
+4. 
+
+
+
+
+12/10/2023
+
+Using the Documentation:
+-
+
+
+
+
+
+HOL:
+
+2. What command would find files and directories modified in the last 5 minutes in /dev directory?
+INPUT: find /dev/ -mmin -5
+OUTPUT: 
+/dev/tty
+/dev/pts/0
+/dev/pts/ptmx
+
+3. What command removes the write permission for the group from a file?
+INPUT: chmod g-w filename
+
+
+
+
+
+
+
+
+
+12/11/2023:
+
+LINUX: Working with FIles and Directories
+
+File System Tree 
+Absolute Path 
+Relative Path
+
+-Listing Files and Directories:
+	- ls    	  -> Lists files and directories
+	- ls -a 	  -> Lists all pseudo hidden files and directories
+	- ls -l /var/log/ -> Long listing format (Shows permissions for files and directories)
+	- ls -al	  -> Shows pseudohidden and in listing format(Perms for files and directories)
+	- ls -h		  -> Shows the human readable sizes of the files
+	- ls -alh	  -> Shows human readable sizes(h), perms(l), hidden files and directories(a)
+
+	- File System Tree:
+		- Root is at top and the branches and leaves grow downward.
+		- root - /
+		- Under root
+	
+	- Absolute vs. Relative Paths
+	
+	NAVIGATION:
+	- pwd 		  -> print work directory
+	- cd		  -> change directory
+	- ../		  -> go one directory up
+	- cd /		  -> takes to the root directory
+	- ../../	  -> takes to the actual directory
+	
+	CREATION:
+	- touch		  -> create a new file [touch Reciept.pdf] 		--->	pwd: /home/aaron ---> creates a file: /home/aaron/Reciept.pdf
+			ABSOLUTE PATH	       [touch /home/jane/Receipt.pdf] 	--->	pwd: /home/aaron ---> creates a file: /home/jane/Reciept.pdf
+			RELATIVE PATH	       [touch ../jane/Reciept.pdf]	---> 	pwd: /home/aaron ---> creates a file: /home/jane/Reciept.pdf
+	- mkdir		  -> make directory
+
+	COPY:
+	- cp [source] [dest]    -> copies the files to another folder		 [cp Receipt.pdf Receiepts/]	---> 	pwd: /home/aaron/Reciept.pdf	---> copies the file: /home/aaron/Receipts/Receipt.pdf
+	- cp -r [source] [dest] -> copies all the files/folder to another folder [cp -r Receipts/ BackupOfReceipts/]		
+
+	MOVE: (No Recursive for this unlike COPY)
+	- mv [source] [dest]    -> moves the file from one directory to another [mv Receipt.pdf Receipts/]
+									     [mv Receipts/ OldReceipts/]
+
+	REMOVE:
+ 	- rm Invoices.pdf   -> removes the file
+	- rm -r Invoices/   -> removes all the files and directories under it
+
+	
+	HARD LINKS AND SOFT LINKS:
+	
